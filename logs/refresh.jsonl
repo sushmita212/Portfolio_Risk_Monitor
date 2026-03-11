@@ -1,0 +1,28 @@
+{"time_utc": "2026-03-11T23:14:01.968916+00:00", "refresh_interval_days": 1, "assets": {"SPY.US": {"status": "skipped", "rows_added": 0}, "QQQ.US": {"status": "skipped", "rows_added": 0}, "TLT.US": {"status": "skipped", "rows_added": 0}}, "summary": {"refreshed": [], "skipped": ["SPY.US", "QQQ.US", "TLT.US"], "errors": []}}
+{
+  "time_utc": "2026-03-11T23:21:13.872942+00:00",
+  "refresh_interval_days": 1,
+  "assets": {
+    "SPY.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-11T16:14:03.877036, interval 1 days"
+    },
+    "QQQ.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-11T16:14:05.581854, interval 1 days"
+    },
+    "TLT.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-11T16:14:07.079165, interval 1 days"
+    }
+  },
+  "summary": {
+    "refreshed": [],
+    "skipped": [
+      "SPY.US",
+      "QQQ.US",
+      "TLT.US"
+    ],
+    "errors": []
+  }
+}
