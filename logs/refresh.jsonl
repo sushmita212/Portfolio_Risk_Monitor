@@ -99,3 +99,75 @@
     "errors": []
   }
 }
+{
+  "time_utc": "2026-03-12T19:55:30.596886+00:00",
+  "refresh_interval_days": 1,
+  "assets": {
+    "SPY.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-11T16:14:03.877036, interval 1 days"
+    },
+    "QQQ.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-11T16:14:05.581854, interval 1 days"
+    },
+    "IWM.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-12T12:34:35.481722, interval 1 days"
+    },
+    "XLF.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-12T12:34:37.095104, interval 1 days"
+    },
+    "XLK.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-12T12:34:38.743853, interval 1 days"
+    },
+    "XLE.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-12T12:34:40.278629, interval 1 days"
+    },
+    "TLT.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-11T16:14:07.079165, interval 1 days"
+    },
+    "LQD.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-12T12:34:41.855282, interval 1 days"
+    },
+    "GLD.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-12T12:34:43.431246, interval 1 days"
+    },
+    "SLV.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-12T12:34:45.024212, interval 1 days"
+    },
+    "VNQ.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-12T12:34:46.549333, interval 1 days"
+    },
+    "XOM.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-12T12:34:48.744434, interval 1 days"
+    }
+  },
+  "summary": {
+    "refreshed": [],
+    "skipped": [
+      "SPY.US",
+      "QQQ.US",
+      "IWM.US",
+      "XLF.US",
+      "XLK.US",
+      "XLE.US",
+      "TLT.US",
+      "LQD.US",
+      "GLD.US",
+      "SLV.US",
+      "VNQ.US",
+      "XOM.US"
+    ],
+    "errors": []
+  }
+}
