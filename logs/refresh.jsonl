@@ -26,3 +26,76 @@
     "errors": []
   }
 }
+{
+  "time_utc": "2026-03-12T19:34:33.492153+00:00",
+  "refresh_interval_days": 1,
+  "assets": {
+    "SPY.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-11T16:14:03.877036, interval 1 days"
+    },
+    "QQQ.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-11T16:14:05.581854, interval 1 days"
+    },
+    "IWM.US": {
+      "status": "refreshed",
+      "rows_added": 5293
+    },
+    "XLF.US": {
+      "status": "refreshed",
+      "rows_added": 5293
+    },
+    "XLK.US": {
+      "status": "refreshed",
+      "rows_added": 5293
+    },
+    "XLE.US": {
+      "status": "refreshed",
+      "rows_added": 5293
+    },
+    "TLT.US": {
+      "status": "skipped",
+      "reason": "last refresh 2026-03-11T16:14:07.079165, interval 1 days"
+    },
+    "LQD.US": {
+      "status": "refreshed",
+      "rows_added": 5290
+    },
+    "GLD.US": {
+      "status": "refreshed",
+      "rows_added": 5293
+    },
+    "SLV.US": {
+      "status": "refreshed",
+      "rows_added": 4998
+    },
+    "VNQ.US": {
+      "status": "refreshed",
+      "rows_added": 5293
+    },
+    "XOM.US": {
+      "status": "refreshed",
+      "rows_added": 14166
+    }
+  },
+  "summary": {
+    "refreshed": [
+      "IWM.US",
+      "XLF.US",
+      "XLK.US",
+      "XLE.US",
+      "LQD.US",
+      "GLD.US",
+      "SLV.US",
+      "VNQ.US",
+      "XOM.US"
+    ],
+    "skipped": [
+      "SPY.US",
+      "QQQ.US",
+      "TLT.US"
+    ],
+    "errors": []
+  }
+}
