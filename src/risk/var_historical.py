@@ -16,5 +16,6 @@ def historical_var(returns, alpha=0.05):
     float
         Historical VaR
     """
+    returns = np.asarray(returns)
     
     return np.quantile(returns, alpha)
