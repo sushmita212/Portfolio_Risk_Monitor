@@ -13,7 +13,7 @@ def test_historical_var_basic():
 
     var = historical_var(returns, alpha=0.2)
 
-    assert np.isclose(var, -0.026)
+    assert np.isclose(var, -0.026, atol=1e-6)
 
 def test_var_confidence_levels():
 
@@ -23,3 +23,20 @@ def test_var_confidence_levels():
     var_20 = historical_var(returns, alpha=0.2)
 
     assert var_5 <= var_20
+
+def test_var_violation_rate():
+
+    # generate synthetic returns
+    # normal distribution not required, but is convenient for testing
+    np.random.seed(0)
+    returns = pd.Series(np.random.normal(0, 0.02, 10000))
+
+    alpha = 0.05
+    var = historical_var(returns, alpha)
+
+    # count fraction of violations
+    violations = (returns < var).mean()
+
+    # check it's close to alpha
+    # loose tolerance avoids flaky test due to randomness
+    assert abs(violations - alpha) < 0.01

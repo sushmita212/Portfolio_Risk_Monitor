@@ -243,3 +243,75 @@
     "errors": []
   }
 }
+{
+  "time_utc": "2026-03-17T16:48:41.771961+00:00",
+  "refresh_interval_days": 1,
+  "assets": {
+    "SPY.US": {
+      "status": "refreshed",
+      "rows_added": 2
+    },
+    "QQQ.US": {
+      "status": "refreshed",
+      "rows_added": 2
+    },
+    "IWM.US": {
+      "status": "refreshed",
+      "rows_added": 2
+    },
+    "XLF.US": {
+      "status": "refreshed",
+      "rows_added": 2
+    },
+    "XLK.US": {
+      "status": "refreshed",
+      "rows_added": 2
+    },
+    "XLE.US": {
+      "status": "refreshed",
+      "rows_added": 2
+    },
+    "TLT.US": {
+      "status": "refreshed",
+      "rows_added": 2
+    },
+    "LQD.US": {
+      "status": "refreshed",
+      "rows_added": 2
+    },
+    "GLD.US": {
+      "status": "refreshed",
+      "rows_added": 2
+    },
+    "SLV.US": {
+      "status": "refreshed",
+      "rows_added": 2
+    },
+    "VNQ.US": {
+      "status": "refreshed",
+      "rows_added": 2
+    },
+    "XOM.US": {
+      "status": "refreshed",
+      "rows_added": 2
+    }
+  },
+  "summary": {
+    "refreshed": [
+      "SPY.US",
+      "QQQ.US",
+      "IWM.US",
+      "XLF.US",
+      "XLK.US",
+      "XLE.US",
+      "TLT.US",
+      "LQD.US",
+      "GLD.US",
+      "SLV.US",
+      "VNQ.US",
+      "XOM.US"
+    ],
+    "skipped": [],
+    "errors": []
+  }
+}
