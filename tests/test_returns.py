@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1] / "src"))
 
-from risk.returns import compute_log_returns
+from features.returns import compute_log_returns
 
 def test_log_returns_basic():
 
