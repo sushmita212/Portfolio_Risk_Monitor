@@ -7,8 +7,11 @@ def portfolio_mean_std(df_returns, weights):
     """
     weights = np.array(weights)
 
-    mu = df_returns.mean().values
-    cov = df_returns.cov().values
+    if len(weights) != df_returns.shape[1]:
+        raise ValueError("Weights must match number of assets")
+
+    mu = df_returns.mean()
+    cov = df_returns.cov()
 
     port_mu = weights @ mu
     port_sigma = np.sqrt(weights @ cov @ weights)
