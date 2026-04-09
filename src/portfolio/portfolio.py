@@ -9,4 +9,8 @@ def compute_portfolio_returns(df_returns, weights):
     returns: Series of portfolio returns
     """
     weights = np.array(weights)
+
+    if len(weights) != df_returns.shape[1]:
+        raise ValueError("Length of weights must match number of assets (columns in df_returns)")
+    
     return df_returns @ weights
