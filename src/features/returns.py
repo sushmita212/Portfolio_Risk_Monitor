@@ -21,7 +21,7 @@ def compute_log_returns(price_df, price_col="Close"):
     return np.log(price_df[price_col] / price_df[price_col].shift(1)).dropna()
 
 
-def build_returns_dataframe(price_data_dict):
+def build_returns_dataframe(price_data_dict, price_col="Close"):
     """
     price_data_dict: dict like { 'AAPL': df, 'SPY': df }
 
@@ -37,7 +37,7 @@ def build_returns_dataframe(price_data_dict):
         df.index = pd.to_datetime(df.index)
         df = df.sort_index()
 
-        prices_dict[ticker] = df["Close"]
+        prices_dict[ticker] = df[price_col]
 
     # Combine all price series into one DataFrame (THIS does alignment)
     df_prices = pd.DataFrame(prices_dict)
