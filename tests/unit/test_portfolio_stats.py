@@ -3,9 +3,9 @@ import numpy as np
 
 import sys
 from pathlib import Path
-sys.path.append(str(Path(__file__).resolve().parents[1] / "src"))
+sys.path.append(str(Path(__file__).resolve().parents[2] / "src"))
 
-from portfolio.stats import portfolio_mean_std
+from portfolio.portfolio_stats import portfolio_mean_std
 
 # 1. Basic correctness test
 def test_portfolio_mean():

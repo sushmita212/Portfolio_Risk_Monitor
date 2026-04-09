@@ -2,7 +2,7 @@ import numpy as np
 
 import sys
 from pathlib import Path
-sys.path.append(str(Path(__file__).resolve().parents[1] / "src"))
+sys.path.append(str(Path(__file__).resolve().parents[2] / "src"))
 from risk.var_parametric import parametric_var
 
 # Basic correctness (known value)
