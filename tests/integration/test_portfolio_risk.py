@@ -63,4 +63,4 @@ def test_parametric_vs_historical_consistency():
     var_hist = historical_var(port_returns, alpha=0.05)
     var_param = parametric_var(mu, sigma, alpha=0.05)
 
-    assert np.isclose(var_hist, var_param, atol=0.005)
+    assert np.isclose(var_hist, var_param, rtol=0.1)

@@ -37,6 +37,6 @@ def test_var_violation_rate():
     # count fraction of violations
     violations = (returns < var).mean()
 
-    # check it's close to alpha
-    # loose tolerance avoids flaky test due to randomness
+    # Sanity check: for historical VaR (empirical quantile),
+    # violation rate should be close to alpha by construction.
     assert abs(violations - alpha) < 0.01

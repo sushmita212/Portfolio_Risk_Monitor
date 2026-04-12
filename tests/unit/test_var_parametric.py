@@ -49,8 +49,13 @@ def test_parametric_var_violation_rate():
     var = parametric_var(mu, sigma, alpha)
 
     violations = (returns < var).mean()
-
-    assert np.isclose(violations, alpha, atol=0.01)
+    
+    # Under null hypothesis, violations ~ Binomial(n, alpha)
+    # Standard error of proportion = sqrt(alpha(1-alpha)/n)
+    # Use 3-sigma tolerance for statistical consistency check
+    se = np.sqrt(alpha * (1 - alpha) / len(returns))
+    tol = 3 * se
+    assert abs(violations - alpha) < tol
 
 # Higher volatility should lead to more negative VaR
 def test_var_increases_with_volatility():
