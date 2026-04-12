@@ -9,6 +9,7 @@ from features.returns import build_returns_dataframe
 from portfolio.portfolio import compute_portfolio_returns
 from portfolio.portfolio_stats import portfolio_mean_std
 
+# Synthetic price data -> > returns dataframe -> portfolio returns pipeline test
 def test_data_features_portfolio_returns():
     # Create synthetic price data for 3 assets
     dates = pd.date_range("2023-01-01", periods=5)
@@ -31,6 +32,7 @@ def test_data_features_portfolio_returns():
     assert isinstance(portfolio_returns, pd.Series)
     assert portfolio_returns.index.equals(df_returns.index)
 
+# Synthetic price data -> > returns dataframe -> portfolio stats pipeline test
 def test_data_features_portfolio_stats():
     # Create synthetic returns data for 3 assets
     dates = pd.date_range("2023-01-01", periods=5)
@@ -58,6 +60,7 @@ def test_data_features_portfolio_stats():
     expected = (df_returns * weights).sum(axis=1).mean()
     assert np.isclose(port_mu, expected)
 
+# Real price data -> returns dataframe -> portfolio stats pipeline test
 def test_real_data_features_portfolio():
     # Load real price data for 3 assets
     df1 = pd.read_csv("data/raw/QQQ.US.csv", index_col="Date", parse_dates=True)

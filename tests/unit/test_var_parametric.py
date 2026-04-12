@@ -17,15 +17,6 @@ def test_parametric_var_known_value():
 
     assert np.isclose(var, expected, atol=1e-6)
 
-# Sign check (VaR should be negative)
-def test_parametric_var_negative():
-    mu = 0.001
-    sigma = 0.02
-
-    var = parametric_var(mu, sigma, alpha=0.05)
-
-    assert var < 0
-
 # Higher confidence → more extreme VaR
 def test_parametric_var_confidence_levels():
     mu = 0.0
@@ -60,3 +51,12 @@ def test_parametric_var_violation_rate():
     violations = (returns < var).mean()
 
     assert np.isclose(violations, alpha, atol=0.01)
+
+# Higher volatility should lead to more negative VaR
+def test_var_increases_with_volatility():
+    mu = 0.0
+
+    var_low = parametric_var(mu, 0.01, 0.05)
+    var_high = parametric_var(mu, 0.02, 0.05)
+
+    assert var_high < var_low
