@@ -10,7 +10,7 @@ ASSETS = [
 
 def fetch_stooq(symbol: str) -> pd.DataFrame:
     url = f"https://stooq.com/q/d/l/?s={symbol}&i=d"
-    df = pd.read_csv(url)
+    df = pd.read_csv(url, on_bad_lines='skip')
     df['Date'] = pd.to_datetime(df['Date'])
     df = df.sort_values('Date').reset_index(drop=True)
     return df

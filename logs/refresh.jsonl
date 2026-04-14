@@ -315,3 +315,651 @@
     "errors": []
   }
 }
+{
+  "time_utc": "2026-04-14T17:40:47.611251+00:00",
+  "refresh_interval_days": 1,
+  "assets": {
+    "SPY.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "QQQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "IWM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLF.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLK.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLE.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "TLT.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "LQD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "GLD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "SLV.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "VNQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XOM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    }
+  },
+  "summary": {
+    "refreshed": [],
+    "skipped": [],
+    "errors": [
+      "SPY.US",
+      "QQQ.US",
+      "IWM.US",
+      "XLF.US",
+      "XLK.US",
+      "XLE.US",
+      "TLT.US",
+      "LQD.US",
+      "GLD.US",
+      "SLV.US",
+      "VNQ.US",
+      "XOM.US"
+    ]
+  }
+}
+{
+  "time_utc": "2026-04-14T17:46:44.350239+00:00",
+  "refresh_interval_days": 1,
+  "assets": {
+    "SPY.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "QQQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "IWM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLF.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLK.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLE.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "TLT.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "LQD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "GLD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "SLV.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "VNQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XOM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    }
+  },
+  "summary": {
+    "refreshed": [],
+    "skipped": [],
+    "errors": [
+      "SPY.US",
+      "QQQ.US",
+      "IWM.US",
+      "XLF.US",
+      "XLK.US",
+      "XLE.US",
+      "TLT.US",
+      "LQD.US",
+      "GLD.US",
+      "SLV.US",
+      "VNQ.US",
+      "XOM.US"
+    ]
+  }
+}
+{
+  "time_utc": "2026-04-14T18:00:24.893482+00:00",
+  "refresh_interval_days": 1,
+  "assets": {
+    "SPY.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "QQQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "IWM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLF.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLK.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLE.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "TLT.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "LQD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "GLD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "SLV.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "VNQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XOM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    }
+  },
+  "summary": {
+    "refreshed": [],
+    "skipped": [],
+    "errors": [
+      "SPY.US",
+      "QQQ.US",
+      "IWM.US",
+      "XLF.US",
+      "XLK.US",
+      "XLE.US",
+      "TLT.US",
+      "LQD.US",
+      "GLD.US",
+      "SLV.US",
+      "VNQ.US",
+      "XOM.US"
+    ]
+  }
+}
+{
+  "time_utc": "2026-04-14T18:01:54.258975+00:00",
+  "refresh_interval_days": 1,
+  "assets": {
+    "SPY.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "QQQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "IWM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLF.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLK.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLE.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "TLT.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "LQD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "GLD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "SLV.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "VNQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XOM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    }
+  },
+  "summary": {
+    "refreshed": [],
+    "skipped": [],
+    "errors": [
+      "SPY.US",
+      "QQQ.US",
+      "IWM.US",
+      "XLF.US",
+      "XLK.US",
+      "XLE.US",
+      "TLT.US",
+      "LQD.US",
+      "GLD.US",
+      "SLV.US",
+      "VNQ.US",
+      "XOM.US"
+    ]
+  }
+}
+{
+  "time_utc": "2026-04-14T18:04:51.015713+00:00",
+  "refresh_interval_days": 1,
+  "assets": {
+    "SPY.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "QQQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "IWM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLF.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLK.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLE.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "TLT.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "LQD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "GLD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "SLV.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "VNQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XOM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    }
+  },
+  "summary": {
+    "refreshed": [],
+    "skipped": [],
+    "errors": [
+      "SPY.US",
+      "QQQ.US",
+      "IWM.US",
+      "XLF.US",
+      "XLK.US",
+      "XLE.US",
+      "TLT.US",
+      "LQD.US",
+      "GLD.US",
+      "SLV.US",
+      "VNQ.US",
+      "XOM.US"
+    ]
+  }
+}
+{
+  "time_utc": "2026-04-14T18:10:13.539534+00:00",
+  "refresh_interval_days": 1,
+  "assets": {
+    "SPY.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "QQQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "IWM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLF.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLK.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLE.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "TLT.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "LQD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "GLD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "SLV.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "VNQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XOM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    }
+  },
+  "summary": {
+    "refreshed": [],
+    "skipped": [],
+    "errors": [
+      "SPY.US",
+      "QQQ.US",
+      "IWM.US",
+      "XLF.US",
+      "XLK.US",
+      "XLE.US",
+      "TLT.US",
+      "LQD.US",
+      "GLD.US",
+      "SLV.US",
+      "VNQ.US",
+      "XOM.US"
+    ]
+  }
+}
+{
+  "time_utc": "2026-04-14T18:11:15.273312+00:00",
+  "refresh_interval_days": 1,
+  "assets": {
+    "SPY.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "QQQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "IWM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLF.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLK.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLE.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "TLT.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "LQD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "GLD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "SLV.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "VNQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XOM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    }
+  },
+  "summary": {
+    "refreshed": [],
+    "skipped": [],
+    "errors": [
+      "SPY.US",
+      "QQQ.US",
+      "IWM.US",
+      "XLF.US",
+      "XLK.US",
+      "XLE.US",
+      "TLT.US",
+      "LQD.US",
+      "GLD.US",
+      "SLV.US",
+      "VNQ.US",
+      "XOM.US"
+    ]
+  }
+}
+{
+  "time_utc": "2026-04-14T18:13:01.042261+00:00",
+  "refresh_interval_days": 1,
+  "assets": {
+    "SPY.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "QQQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "IWM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLF.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLK.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XLE.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "TLT.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "LQD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "GLD.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "SLV.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "VNQ.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    },
+    "XOM.US": {
+      "status": "error",
+      "message": "Error tokenizing data. C error: Expected 1 fields in line 6, saw 2\n"
+    }
+  },
+  "summary": {
+    "refreshed": [],
+    "skipped": [],
+    "errors": [
+      "SPY.US",
+      "QQQ.US",
+      "IWM.US",
+      "XLF.US",
+      "XLK.US",
+      "XLE.US",
+      "TLT.US",
+      "LQD.US",
+      "GLD.US",
+      "SLV.US",
+      "VNQ.US",
+      "XOM.US"
+    ]
+  }
+}
+{
+  "time_utc": "2026-04-14T18:25:29.461835+00:00",
+  "refresh_interval_days": 1,
+  "assets": {
+    "SPY.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "QQQ.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "IWM.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "XLF.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "XLK.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "XLE.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "TLT.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "LQD.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "GLD.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "SLV.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "VNQ.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "XOM.US": {
+      "status": "error",
+      "message": "'Date'"
+    }
+  },
+  "summary": {
+    "refreshed": [],
+    "skipped": [],
+    "errors": [
+      "SPY.US",
+      "QQQ.US",
+      "IWM.US",
+      "XLF.US",
+      "XLK.US",
+      "XLE.US",
+      "TLT.US",
+      "LQD.US",
+      "GLD.US",
+      "SLV.US",
+      "VNQ.US",
+      "XOM.US"
+    ]
+  }
+}
