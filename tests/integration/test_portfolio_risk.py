@@ -13,8 +13,6 @@ from risk.var_parametric import parametric_var
 
 
 def test_portfolio_to_var():
-    import pandas as pd
-    import numpy as np
 
     # Create synthetic price data (3 assets)
     dates = pd.date_range("2026-01-01", periods=6)

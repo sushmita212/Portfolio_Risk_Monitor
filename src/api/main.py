@@ -1,7 +1,9 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, model_validator
+from typing import Literal, List
 
 from src.api.services.var_service import compute_var
+from src.api.services.var_service import compute_portfolio_var
 
 app = FastAPI()
 
@@ -13,7 +15,28 @@ def health_check():
 
 class VaRRequest(BaseModel):
     ticker: str
-    confidence_level: float = 0.95
+    confidence_level: float = Field(0.95, gt=0, lt=1)
+    method: Literal["historical", "parametric"] = "historical"
+
+
+class PortfolioVaRRequest(BaseModel):
+    tickers: List[str]
+    weights: List[float]
+    confidence_level: float = Field(0.95, gt=0, lt=1)
+    method: Literal["historical", "parametric"] = "historical"
+
+    @model_validator(mode="after")
+    def validate_portfolio_inputs(self):
+        if len(self.tickers) == 0:
+            raise ValueError("portfolio cannot be empty")
+        
+        if len(self.tickers) != len(self.weights):
+            raise ValueError("tickers and weights must have the same length")
+
+        if abs(sum(self.weights) - 1.0) > 1e-6:
+            raise ValueError("weights must sum to 1")
+
+        return self
 
 
 @app.post("/var")
@@ -23,6 +46,7 @@ def compute_var_endpoint(request: VaRRequest):
         var_value = compute_var(
             ticker=request.ticker,
             confidence_level=request.confidence_level,
+            method=request.method,
         )
     except FileNotFoundError:
         raise HTTPException(status_code=404, detail="Ticker data not found")
@@ -31,4 +55,28 @@ def compute_var_endpoint(request: VaRRequest):
         "ticker": request.ticker,
         "var": var_value,
         "confidence_level": request.confidence_level,
+        "method": request.method
+    }
+
+
+@app.post("/portfolio/var")
+def compute_portfolio_var_endpoint(request: PortfolioVaRRequest):
+
+    try:
+        var_value = compute_portfolio_var(
+            tickers=request.tickers,
+            weights=request.weights,
+            confidence_level=request.confidence_level,
+            method=request.method,
+        )
+
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="One or more tickers not found")
+
+    return {
+        "tickers": request.tickers,
+        "weights": request.weights,
+        "var": float(var_value),
+        "confidence_level": request.confidence_level,
+        "method": request.method
     }
