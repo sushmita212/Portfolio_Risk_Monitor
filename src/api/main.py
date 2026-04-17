@@ -17,6 +17,8 @@ class VaRRequest(BaseModel):
     ticker: str
     confidence_level: float = Field(0.95, gt=0, lt=1)
     method: Literal["historical", "parametric"] = "historical"
+    time_horizon: int = Field(1, gt=0)
+    use_drift: bool = False
 
 
 class PortfolioVaRRequest(BaseModel):
@@ -24,6 +26,8 @@ class PortfolioVaRRequest(BaseModel):
     weights: List[float]
     confidence_level: float = Field(0.95, gt=0, lt=1)
     method: Literal["historical", "parametric"] = "historical"
+    time_horizon: int = Field(1, gt=0)
+    use_drift: bool = False
 
     @model_validator(mode="after")
     def validate_portfolio_inputs(self):
@@ -47,6 +51,8 @@ def compute_var_endpoint(request: VaRRequest):
             ticker=request.ticker,
             confidence_level=request.confidence_level,
             method=request.method,
+            time_horizon=request.time_horizon,
+            use_drift=request.use_drift
         )
     except FileNotFoundError:
         raise HTTPException(status_code=404, detail="Ticker data not found")
@@ -55,7 +61,9 @@ def compute_var_endpoint(request: VaRRequest):
         "ticker": request.ticker,
         "var": var_value,
         "confidence_level": request.confidence_level,
-        "method": request.method
+        "method": request.method,
+        "time_horizon": request.time_horizon,
+        "use_drift": request.use_drift
     }
 
 
@@ -68,6 +76,8 @@ def compute_portfolio_var_endpoint(request: PortfolioVaRRequest):
             weights=request.weights,
             confidence_level=request.confidence_level,
             method=request.method,
+            time_horizon=request.time_horizon,
+            use_drift=request.use_drift
         )
 
     except FileNotFoundError:
@@ -78,5 +88,7 @@ def compute_portfolio_var_endpoint(request: PortfolioVaRRequest):
         "weights": request.weights,
         "var": float(var_value),
         "confidence_level": request.confidence_level,
-        "method": request.method
+        "method": request.method,
+        "time_horizon": request.time_horizon,
+        "use_drift": request.use_drift
     }

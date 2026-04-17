@@ -1035,3 +1035,75 @@
     ]
   }
 }
+{
+  "time_utc": "2026-04-17T20:15:58.700595+00:00",
+  "refresh_interval_days": 1,
+  "assets": {
+    "SPY.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "QQQ.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "IWM.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "XLF.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "XLK.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "XLE.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "TLT.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "LQD.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "GLD.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "SLV.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "VNQ.US": {
+      "status": "error",
+      "message": "'Date'"
+    },
+    "XOM.US": {
+      "status": "error",
+      "message": "'Date'"
+    }
+  },
+  "summary": {
+    "refreshed": [],
+    "skipped": [],
+    "errors": [
+      "SPY.US",
+      "QQQ.US",
+      "IWM.US",
+      "XLF.US",
+      "XLK.US",
+      "XLE.US",
+      "TLT.US",
+      "LQD.US",
+      "GLD.US",
+      "SLV.US",
+      "VNQ.US",
+      "XOM.US"
+    ]
+  }
+}

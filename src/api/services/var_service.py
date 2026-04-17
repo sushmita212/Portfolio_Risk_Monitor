@@ -10,7 +10,7 @@ from src.portfolio.portfolio_stats import portfolio_mean_std
 
 
 
-def compute_var(ticker: str, confidence_level: float, method: str = "historical") -> float:
+def compute_var(ticker: str, confidence_level: float, method: str = "historical", time_horizon: int = 1, use_drift: bool = False) -> float:
 
     file_path = f"data/raw/{ticker}.csv"
 
@@ -25,6 +25,7 @@ def compute_var(ticker: str, confidence_level: float, method: str = "historical"
         var_value = historical_var(
             returns=returns,
             alpha=1 - confidence_level,
+            time_horizon=time_horizon,
         )
     elif method == "parametric":
         mu = returns.mean()
@@ -33,13 +34,15 @@ def compute_var(ticker: str, confidence_level: float, method: str = "historical"
             mu=mu,
             sigma=sigma,
             alpha=1 - confidence_level,
+            time_horizon=time_horizon,
+            use_drift=use_drift
         )
     else:
         raise ValueError("Invalid method. Choose 'historical' or 'parametric'.")
 
     return float(var_value)
 
-def compute_portfolio_var(tickers: list, weights: list, confidence_level: float, method: str = "historical") -> float:
+def compute_portfolio_var(tickers: list, weights: list, confidence_level: float, method: str = "historical", time_horizon: int = 1, use_drift: bool = False) -> float:
     price_data = {}
 
     # Load price data for each ticker
@@ -60,6 +63,7 @@ def compute_portfolio_var(tickers: list, weights: list, confidence_level: float,
         portfolio_var = historical_var(
             returns=portfolio_returns,
             alpha=1 - confidence_level,
+            time_horizon=time_horizon
         )
     elif method == "parametric":
         port_mu, port_sigma = portfolio_mean_std(df_returns, weights)
@@ -67,6 +71,8 @@ def compute_portfolio_var(tickers: list, weights: list, confidence_level: float,
             mu=port_mu,
             sigma=port_sigma,
             alpha=1 - confidence_level,
+            time_horizon=time_horizon,
+            use_drift=use_drift
         )
     else:
         raise ValueError("Invalid method. Choose 'historical' or 'parametric'.")
