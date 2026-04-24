@@ -11,12 +11,14 @@ DATA_DIR = "data/raw"
 METADATA_FILE = "data/metadata.json"
 LOG_FILE = "logs/refresh.jsonl"
 
-# ASSETS = [
-#     "SPY", "QQQ", "IWM", "XLF",
-#     "XLK", "XLE", "TLT", "LQD",
-#     "GLD", "SLV", "VNQ", "XOM"
-# ]
-ASSETS = ["SPY"]
+ASSETS = [
+    "SPY", "QQQ", "IWM", "XLF",
+    "XLK", "XLE", "TLT", "LQD",
+    "GLD", "SLV", "VNQ", "XOM"
+]
+# ASSETS = ["SPY","QQQ"]
+
+DEFAULT_START = "2000-01-01"
 
 # -----------------------------
 # Helpers
@@ -35,7 +37,7 @@ def save_metadata(metadata):
 def append_log(entry):
     os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
     with open(LOG_FILE, "a") as f:
-        f.write(json.dumps(entry, indent=2) + "\n")
+        f.write(json.dumps(entry) + "\n")  # JSONL format
 
 def get_csv_path(symbol):
     os.makedirs(DATA_DIR, exist_ok=True)
@@ -46,9 +48,10 @@ def get_csv_path(symbol):
 # -----------------------------
 def refresh_assets():
     metadata = load_metadata()
+    now = datetime.now(timezone.utc)
 
     log_entry = {
-        "time_utc": datetime.now(timezone.utc).isoformat(),
+        "time_utc": now.isoformat(),
         "assets": {},
         "summary": {
             "refreshed": [],
@@ -59,35 +62,72 @@ def refresh_assets():
 
     for symbol in ASSETS:
         try:
-            last_refresh = metadata.get(symbol, {}).get("last_refresh")
-
-            # Safe incremental start
-            start = pd.to_datetime(last_refresh, utc=True) if last_refresh else None
-            end = datetime.now(timezone.utc)
-
-            df_new = fetch_prices(symbol, start=start, end=end)
-
             csv_path = get_csv_path(symbol)
-            file_exists = os.path.exists(csv_path)
 
-            # Append or create
-            if file_exists:
-                df_new.to_csv(csv_path, mode="a", header=False, index=False)
+            # -----------------------------
+            # Determine start date
+            # -----------------------------
+            if os.path.exists(csv_path):
+                df_old = pd.read_csv(csv_path)
+                df_old["Date"] = pd.to_datetime(df_old["Date"])
+
+                if not df_old.empty:
+                    last_date = df_old["Date"].max()
+                    start = last_date + pd.Timedelta(days=1)
+                else:
+                    df_old = None
+                    start = pd.to_datetime(DEFAULT_START)
             else:
-                df_new.to_csv(csv_path, index=False)
+                df_old = None
+                start = pd.to_datetime(DEFAULT_START)
 
-            # Update metadata
+            # -----------------------------
+            # EXPECTATION CHECK (skip)
+            # -----------------------------
+            if start.date() >= now.date():
+                log_entry["assets"][symbol] = {
+                    "status": "skipped",
+                    "reason": "no new trading day"
+                }
+                log_entry["summary"]["skipped"].append(symbol)
+                continue
+
+            # -----------------------------
+            # FETCH (raises if empty)
+            # -----------------------------
+            df_new = fetch_prices(symbol, start=start, end=now)
+
+            # -----------------------------
+            # MERGE + DEDUPE
+            # -----------------------------
+            if df_old is not None:
+                df = pd.concat([df_old, df_new])
+                df = df.drop_duplicates(subset=["Date"]).sort_values("Date")
+            else:
+                df = df_new
+
+            # -----------------------------
+            # SAVE
+            # -----------------------------
+            df.to_csv(csv_path, index=False)
+
+            # -----------------------------
+            # UPDATE METADATA
+            # -----------------------------
             metadata[symbol] = {
-                "last_refresh": end.isoformat(),
-                "rows": len(df_new)
+                "last_refresh": now.isoformat(),
+                "rows": len(df)
             }
 
-            # Log success
+            # -----------------------------
+            # LOG SUCCESS
+            # -----------------------------
             log_entry["assets"][symbol] = {
                 "status": "refreshed",
                 "rows_added": len(df_new)
             }
             log_entry["summary"]["refreshed"].append(symbol)
+
 
         except Exception as e:
             log_entry["assets"][symbol] = {
@@ -96,10 +136,14 @@ def refresh_assets():
             }
             log_entry["summary"]["errors"].append(symbol)
 
+    # -----------------------------
+    # Persist metadata + logs
+    # -----------------------------
     save_metadata(metadata)
     append_log(log_entry)
 
     print("Refresh completed. Log appended.")
+
 
 # -----------------------------
 # Run

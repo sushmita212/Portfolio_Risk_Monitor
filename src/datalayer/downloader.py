@@ -1,9 +1,9 @@
 import pandas as pd
 import yfinance as yf
 
-def fetch_prices(symbol: str, start=None, end=None):
+def fetch_prices(symbol: str, start, end):
 
-    df = yf.download(symbol, start="2000-01-01", end=end, progress=False)
+    df = yf.download(symbol, start=start, end=end, progress=False)
 
     if df.empty:
         raise ValueError(f"No data returned for {symbol}")
