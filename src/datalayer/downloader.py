@@ -1,26 +1,43 @@
 import pandas as pd
-import os
+import yfinance as yf
 
-DATA_DIR = "data/raw"
-ASSETS = [
-    "SPY.US", "QQQ.US", "IWM.US", "XLF.US",
-    "XLK.US", "XLE.US", "TLT.US", "LQD.US",
-    "GLD.US", "SLV.US", "VNQ.US", "XOM.US"
-    ] 
+def fetch_prices(symbol: str, start=None, end=None):
 
-def fetch_stooq(symbol: str) -> pd.DataFrame:
-    url = f"https://stooq.com/q/d/l/?s={symbol}&i=d"
-    df = pd.read_csv(url, on_bad_lines='skip')
-    df['Date'] = pd.to_datetime(df['Date'])
-    df = df.sort_values('Date').reset_index(drop=True)
+    df = yf.download(symbol, start="2000-01-01", end=end, progress=False)
+
+    if df.empty:
+        raise ValueError(f"No data returned for {symbol}")
+
+    # -----------------------------
+    # Fix MultiIndex (safe)
+    # -----------------------------
+    if isinstance(df.columns, pd.MultiIndex):
+        df.columns = df.columns.get_level_values(0)
+
+    df = df.reset_index()
+
+    # -----------------------------
+    # Drop bad rows (THIS FIXES YOUR NaT/SPY ROW)
+    # -----------------------------
+    df = df.dropna(subset=["Date"])
+
+    # -----------------------------
+    # Keep only expected columns
+    # -----------------------------
+    expected = ["Date", "Open", "High", "Low", "Close", "Volume"]
+    df = df[[c for c in expected if c in df.columns]]
+
+    # -----------------------------
+    # Force numeric conversion (CRITICAL FIX)
+    # -----------------------------
+    for col in ["Open", "High", "Low", "Close", "Volume"]:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+
+    # -----------------------------
+    # Clean + sort
+    # -----------------------------
+    df = df.dropna(subset=["Close"])
+    df = df.sort_values("Date").reset_index(drop=True)
+
     return df
-
-def save_csv(symbol: str, df: pd.DataFrame):
-    os.makedirs(DATA_DIR, exist_ok=True)
-    df.to_csv(os.path.join(DATA_DIR, f"{symbol}.csv"), index=False)
-
-if __name__ == "__main__":
-    for symbol in ASSETS:
-        df = fetch_stooq(symbol)
-        save_csv(symbol, df)
-        print(f"{symbol} saved with {len(df)} rows")

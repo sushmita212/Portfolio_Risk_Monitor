@@ -1107,3 +1107,606 @@
     ]
   }
 }
+{"time_utc": "2026-04-17T22:17:33.498796+00:00", "assets": {"SPY": {"status": "error", "message": "\"['Adj Close'] not in index\""}, "QQQ": {"status": "error", "message": "\"['Adj Close'] not in index\""}, "IWM": {"status": "error", "message": "\"['Adj Close'] not in index\""}, "XLF": {"status": "error", "message": "\"['Adj Close'] not in index\""}, "XLK": {"status": "error", "message": "\"['Adj Close'] not in index\""}, "XLE": {"status": "error", "message": "\"['Adj Close'] not in index\""}, "TLT": {"status": "error", "message": "\"['Adj Close'] not in index\""}, "LQD": {"status": "error", "message": "\"['Adj Close'] not in index\""}, "GLD": {"status": "error", "message": "\"['Adj Close'] not in index\""}, "SLV": {"status": "error", "message": "\"['Adj Close'] not in index\""}, "VNQ": {"status": "error", "message": "\"['Adj Close'] not in index\""}, "XOM": {"status": "error", "message": "\"['Adj Close'] not in index\""}}, "summary": {"refreshed": [], "skipped": [], "errors": ["SPY", "QQQ", "IWM", "XLF", "XLK", "XLE", "TLT", "LQD", "GLD", "SLV", "VNQ", "XOM"]}}
+{"time_utc": "2026-04-17T22:22:46.011599+00:00", "assets": {"SPY": {"status": "refreshed", "rows_added": 23}, "QQQ": {"status": "refreshed", "rows_added": 23}, "IWM": {"status": "refreshed", "rows_added": 23}, "XLF": {"status": "refreshed", "rows_added": 23}, "XLK": {"status": "refreshed", "rows_added": 23}, "XLE": {"status": "refreshed", "rows_added": 23}, "TLT": {"status": "refreshed", "rows_added": 23}, "LQD": {"status": "refreshed", "rows_added": 23}, "GLD": {"status": "refreshed", "rows_added": 23}, "SLV": {"status": "refreshed", "rows_added": 23}, "VNQ": {"status": "refreshed", "rows_added": 23}, "XOM": {"status": "refreshed", "rows_added": 23}}, "summary": {"refreshed": ["SPY", "QQQ", "IWM", "XLF", "XLK", "XLE", "TLT", "LQD", "GLD", "SLV", "VNQ", "XOM"], "skipped": [], "errors": []}}
+{"time_utc": "2026-04-17T22:25:32.738285+00:00", "assets": {"SPY": {"status": "refreshed", "rows_added": 1}, "QQQ": {"status": "refreshed", "rows_added": 1}, "IWM": {"status": "refreshed", "rows_added": 1}, "XLF": {"status": "refreshed", "rows_added": 1}, "XLK": {"status": "refreshed", "rows_added": 1}, "XLE": {"status": "refreshed", "rows_added": 1}, "TLT": {"status": "refreshed", "rows_added": 1}, "LQD": {"status": "refreshed", "rows_added": 1}, "GLD": {"status": "refreshed", "rows_added": 1}, "SLV": {"status": "refreshed", "rows_added": 1}, "VNQ": {"status": "refreshed", "rows_added": 1}, "XOM": {"status": "refreshed", "rows_added": 1}}, "summary": {"refreshed": ["SPY", "QQQ", "IWM", "XLF", "XLK", "XLE", "TLT", "LQD", "GLD", "SLV", "VNQ", "XOM"], "skipped": [], "errors": []}}
+{
+  "time_utc": "2026-04-17T22:28:25.414323+00:00",
+  "assets": {
+    "SPY": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "QQQ": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "IWM": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "XLF": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "XLK": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "XLE": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "TLT": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "LQD": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "GLD": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "SLV": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "VNQ": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "XOM": {
+      "status": "refreshed",
+      "rows_added": 1
+    }
+  },
+  "summary": {
+    "refreshed": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "XLF",
+      "XLK",
+      "XLE",
+      "TLT",
+      "LQD",
+      "GLD",
+      "SLV",
+      "VNQ",
+      "XOM"
+    ],
+    "skipped": [],
+    "errors": []
+  }
+}
+{
+  "time_utc": "2026-04-17T23:04:25.478066+00:00",
+  "assets": {
+    "SPY": {
+      "status": "error",
+      "message": "arg must be a list, tuple, 1-d array, or Series"
+    },
+    "QQQ": {
+      "status": "error",
+      "message": "arg must be a list, tuple, 1-d array, or Series"
+    },
+    "IWM": {
+      "status": "error",
+      "message": "arg must be a list, tuple, 1-d array, or Series"
+    },
+    "XLF": {
+      "status": "error",
+      "message": "arg must be a list, tuple, 1-d array, or Series"
+    },
+    "XLK": {
+      "status": "error",
+      "message": "arg must be a list, tuple, 1-d array, or Series"
+    },
+    "XLE": {
+      "status": "error",
+      "message": "arg must be a list, tuple, 1-d array, or Series"
+    },
+    "TLT": {
+      "status": "error",
+      "message": "arg must be a list, tuple, 1-d array, or Series"
+    },
+    "LQD": {
+      "status": "error",
+      "message": "arg must be a list, tuple, 1-d array, or Series"
+    },
+    "GLD": {
+      "status": "error",
+      "message": "arg must be a list, tuple, 1-d array, or Series"
+    },
+    "SLV": {
+      "status": "error",
+      "message": "arg must be a list, tuple, 1-d array, or Series"
+    },
+    "VNQ": {
+      "status": "error",
+      "message": "arg must be a list, tuple, 1-d array, or Series"
+    },
+    "XOM": {
+      "status": "error",
+      "message": "arg must be a list, tuple, 1-d array, or Series"
+    }
+  },
+  "summary": {
+    "refreshed": [],
+    "skipped": [],
+    "errors": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "XLF",
+      "XLK",
+      "XLE",
+      "TLT",
+      "LQD",
+      "GLD",
+      "SLV",
+      "VNQ",
+      "XOM"
+    ]
+  }
+}
+{
+  "time_utc": "2026-04-17T23:05:52.434027+00:00",
+  "assets": {
+    "SPY": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "QQQ": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "IWM": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "XLF": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "XLK": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "XLE": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "TLT": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "LQD": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "GLD": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "SLV": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "VNQ": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "XOM": {
+      "status": "refreshed",
+      "rows_added": 1
+    }
+  },
+  "summary": {
+    "refreshed": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "XLF",
+      "XLK",
+      "XLE",
+      "TLT",
+      "LQD",
+      "GLD",
+      "SLV",
+      "VNQ",
+      "XOM"
+    ],
+    "skipped": [],
+    "errors": []
+  }
+}
+{
+  "time_utc": "2026-04-17T23:17:11.089315+00:00",
+  "assets": {
+    "SPY": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "QQQ": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "IWM": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "XLF": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "XLK": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "XLE": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "TLT": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "LQD": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "GLD": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "SLV": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "VNQ": {
+      "status": "refreshed",
+      "rows_added": 1
+    },
+    "XOM": {
+      "status": "refreshed",
+      "rows_added": 1
+    }
+  },
+  "summary": {
+    "refreshed": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "XLF",
+      "XLK",
+      "XLE",
+      "TLT",
+      "LQD",
+      "GLD",
+      "SLV",
+      "VNQ",
+      "XOM"
+    ],
+    "skipped": [],
+    "errors": []
+  }
+}
+{
+  "time_utc": "2026-04-17T23:19:40.874389+00:00",
+  "assets": {
+    "SPY": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "QQQ": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "IWM": {
+      "status": "refreshed",
+      "rows_added": 6511
+    },
+    "XLF": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "XLK": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "XLE": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "TLT": {
+      "status": "refreshed",
+      "rows_added": 5968
+    },
+    "LQD": {
+      "status": "refreshed",
+      "rows_added": 5968
+    },
+    "GLD": {
+      "status": "refreshed",
+      "rows_added": 5386
+    },
+    "SLV": {
+      "status": "refreshed",
+      "rows_added": 5024
+    },
+    "VNQ": {
+      "status": "refreshed",
+      "rows_added": 5422
+    },
+    "XOM": {
+      "status": "refreshed",
+      "rows_added": 6612
+    }
+  },
+  "summary": {
+    "refreshed": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "XLF",
+      "XLK",
+      "XLE",
+      "TLT",
+      "LQD",
+      "GLD",
+      "SLV",
+      "VNQ",
+      "XOM"
+    ],
+    "skipped": [],
+    "errors": []
+  }
+}
+{
+  "time_utc": "2026-04-17T23:20:43.829870+00:00",
+  "assets": {
+    "SPY": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "QQQ": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "IWM": {
+      "status": "refreshed",
+      "rows_added": 6511
+    },
+    "XLF": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "XLK": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "XLE": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "TLT": {
+      "status": "refreshed",
+      "rows_added": 5968
+    },
+    "LQD": {
+      "status": "refreshed",
+      "rows_added": 5968
+    },
+    "GLD": {
+      "status": "refreshed",
+      "rows_added": 5386
+    },
+    "SLV": {
+      "status": "refreshed",
+      "rows_added": 5024
+    },
+    "VNQ": {
+      "status": "refreshed",
+      "rows_added": 5422
+    },
+    "XOM": {
+      "status": "refreshed",
+      "rows_added": 6612
+    }
+  },
+  "summary": {
+    "refreshed": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "XLF",
+      "XLK",
+      "XLE",
+      "TLT",
+      "LQD",
+      "GLD",
+      "SLV",
+      "VNQ",
+      "XOM"
+    ],
+    "skipped": [],
+    "errors": []
+  }
+}
+{
+  "time_utc": "2026-04-17T23:22:28.398867+00:00",
+  "assets": {
+    "SPY": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "QQQ": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "IWM": {
+      "status": "refreshed",
+      "rows_added": 6511
+    },
+    "XLF": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "XLK": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "XLE": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "TLT": {
+      "status": "refreshed",
+      "rows_added": 5968
+    },
+    "LQD": {
+      "status": "refreshed",
+      "rows_added": 5968
+    },
+    "GLD": {
+      "status": "refreshed",
+      "rows_added": 5386
+    },
+    "SLV": {
+      "status": "refreshed",
+      "rows_added": 5024
+    },
+    "VNQ": {
+      "status": "refreshed",
+      "rows_added": 5422
+    },
+    "XOM": {
+      "status": "refreshed",
+      "rows_added": 6612
+    }
+  },
+  "summary": {
+    "refreshed": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "XLF",
+      "XLK",
+      "XLE",
+      "TLT",
+      "LQD",
+      "GLD",
+      "SLV",
+      "VNQ",
+      "XOM"
+    ],
+    "skipped": [],
+    "errors": []
+  }
+}
+{
+  "time_utc": "2026-04-17T23:24:35.262328+00:00",
+  "assets": {
+    "SPY": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "QQQ": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "IWM": {
+      "status": "refreshed",
+      "rows_added": 6511
+    },
+    "XLF": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "XLK": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "XLE": {
+      "status": "refreshed",
+      "rows_added": 6612
+    },
+    "TLT": {
+      "status": "refreshed",
+      "rows_added": 5968
+    },
+    "LQD": {
+      "status": "refreshed",
+      "rows_added": 5968
+    },
+    "GLD": {
+      "status": "refreshed",
+      "rows_added": 5386
+    },
+    "SLV": {
+      "status": "refreshed",
+      "rows_added": 5024
+    },
+    "VNQ": {
+      "status": "refreshed",
+      "rows_added": 5422
+    },
+    "XOM": {
+      "status": "refreshed",
+      "rows_added": 6612
+    }
+  },
+  "summary": {
+    "refreshed": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "XLF",
+      "XLK",
+      "XLE",
+      "TLT",
+      "LQD",
+      "GLD",
+      "SLV",
+      "VNQ",
+      "XOM"
+    ],
+    "skipped": [],
+    "errors": []
+  }
+}
+{
+  "time_utc": "2026-04-17T23:25:31.348997+00:00",
+  "assets": {
+    "SPY": {
+      "status": "refreshed",
+      "rows_added": 6612
+    }
+  },
+  "summary": {
+    "refreshed": [
+      "SPY"
+    ],
+    "skipped": [],
+    "errors": []
+  }
+}
+{
+  "time_utc": "2026-04-17T23:25:58.151611+00:00",
+  "assets": {
+    "SPY": {
+      "status": "refreshed",
+      "rows_added": 6612
+    }
+  },
+  "summary": {
+    "refreshed": [
+      "SPY"
+    ],
+    "skipped": [],
+    "errors": []
+  }
+}
