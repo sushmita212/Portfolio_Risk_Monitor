@@ -1,5 +1,5 @@
 #!/bin/bash
-export PROJECT_ROOT=/Users/susmitasingh/Documents/GitHub/Portfolio_Risk_Monitor  
-cd "$PROJECT_ROOT"                               # move to project root
-source .venv/bin/activate                        # activate your virtual environment
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$PROJECT_ROOT"
+
 python src/datalayer/update_prices.py                 # run the Python refresh 
