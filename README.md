@@ -37,3 +37,24 @@ It is organized into four main layers:
 - Includes integration tests for end-to-end pipeline validation
 - Ensures correctness of data flow and risk calculations
 
+## Environment Setup
+The project requires Python 3.11+.
+
+It is recommended to use a virtual environment to manage dependencies.
+
+\# Clone the repository
+git clone <repo-url>
+cd Portfolio_Risk_Monitor
+
+\# Create virtual environment
+python3 -m venv venv
+
+\# Activate environment
+\# macOS / Linux:
+source venv/bin/activate
+\# Windows:
+venv\Scripts\activate
+
+\# Install dependencies
+pip install -r requirements.txt
+
