@@ -12,9 +12,9 @@ The system computes portfolio-level Value-at-Risk (VaR) and exposes results thro
 
 It is organized into four main layers:
 1. Data Layer
-Fetches historical market data using yfinance / stooq
-Stores data locally in CSV format (data/raw/)
-Maintains metadata and refresh logs for tracking updates
+- Fetches historical market data using yfinance / stooq
+- Stores data locally in CSV format (data/raw/)
+- Maintains metadata and refresh logs for tracking updates
 2. Risk Engine
 Computes portfolio returns based on configurable asset weights
 Implements Value-at-Risk (VaR) using historical simulation methods
