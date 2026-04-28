@@ -6,3 +6,25 @@ The system is built using FastAPI to expose portfolio risk metrics through HTTP 
 The primary objective of the project is to explore and apply concepts in financial risk modeling, including statistical risk estimation, model backtesting, and software engineering practices for building reliable and reproducible analytics systems. An Expected Shortfall (ES) endpoint is currently under development.
 
 The project includes unit and integration testing to ensure correctness and reliability of the risk computation pipeline.
+
+## System Architecture
+The system computes portfolio-level Value-at-Risk (VaR) and exposes results through a FastAPI-based interface.
+
+It is organized into four main layers:
+1. Data Layer
+Fetches historical market data using yfinance / stooq
+Stores data locally in CSV format (data/raw/)
+Maintains metadata and refresh logs for tracking updates
+2. Risk Engine
+Computes portfolio returns based on configurable asset weights
+Implements Value-at-Risk (VaR) using historical simulation methods
+Supports portfolio-level aggregation across multiple assets
+3. API Layer
+Built using FastAPI
+Exposes risk metrics through HTTP endpoints
+Enables programmatic access to VaR estimates for any valid portfolio configuration
+4. Testing Layer
+Includes unit tests for core risk computations
+Includes integration tests for end-to-end pipeline validation
+Ensures correctness of data flow and risk calculations
+
