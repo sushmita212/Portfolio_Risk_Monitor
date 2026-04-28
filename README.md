@@ -41,20 +41,20 @@ It is organized into four main layers:
 The project requires Python 3.11+.
 
 It is recommended to use a virtual environment to manage dependencies.
-
-\# Clone the repository
+```bash
+# Clone the repository
 git clone <repo-url>
 cd Portfolio_Risk_Monitor
 
-\# Create virtual environment
+# Create virtual environment
 python3 -m venv venv
 
-\# Activate environment
-\# macOS / Linux:
+# Activate environment
+# macOS / Linux:
 source venv/bin/activate
-\# Windows:
+# Windows:
 venv\Scripts\activate
 
-\# Install dependencies
+# Install dependencies
 pip install -r requirements.txt
-
+```
