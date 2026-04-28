@@ -11,20 +11,21 @@ The project includes unit and integration testing to ensure correctness and reli
 The system computes portfolio-level Value-at-Risk (VaR) and exposes results through a FastAPI-based interface.
 
 It is organized into four main layers:
-1. Data Layer
-- Fetches historical market data using yfinance / stooq
+**1. Data Layer**
+- Fetches historical market data using yfinance
 - Stores data locally in CSV format (data/raw/)
 - Maintains metadata and refresh logs for tracking updates
-2. Risk Engine
-Computes portfolio returns based on configurable asset weights
-Implements Value-at-Risk (VaR) using historical simulation methods
-Supports portfolio-level aggregation across multiple assets
-3. API Layer
-Built using FastAPI
-Exposes risk metrics through HTTP endpoints
-Enables programmatic access to VaR estimates for any valid portfolio configuration
-4. Testing Layer
-Includes unit tests for core risk computations
-Includes integration tests for end-to-end pipeline validation
-Ensures correctness of data flow and risk calculations
+**2. Risk Engine**
+- Computes portfolio returns based on configurable asset weights
+- Implements Value-at-Risk (VaR) using two approaches: Historical simulation (quantile-based method), Parametric method (Variance-Covariance approach)
+- Ongoing work on implementing Expected Shortfall (ES) as an additional tail risk measure
+- Supports portfolio-level aggregation across multiple assets
+**3. API Layer**
+- Built using FastAPI
+- Exposes risk metrics through HTTP endpoints
+- Enables programmatic access to VaR estimates for any valid portfolio configuration
+**4. Testing Layer**
+- Includes unit tests for core risk computations
+- Includes integration tests for end-to-end pipeline validation
+- Ensures correctness of data flow and risk calculations
 
