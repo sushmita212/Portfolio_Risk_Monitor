@@ -58,7 +58,7 @@ venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 ```
-##Data Pipeline
+## Data Pipeline
 
 The system uses historical market data sourced from yfinance to construct time series for a predefined set of assets.
 
@@ -69,7 +69,7 @@ The system uses historical market data sourced from yfinance to construct time s
 - Data is stored locally in CSV format under data/raw/
 - Metadata about the last update is tracked in data/metadata.json
 **Data Download/Refresh**
-- The dataset can be downloaded(enitre historical data)/refreshed (if some data already exists) using the update script:
+- The dataset can be fully downloaded (initial run) or incrementally refreshed (subsequent runs) using the update script:
 ```bash
 scripts/update_prices.sh
 ```
