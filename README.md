@@ -114,7 +114,7 @@ Follow these steps to run the full pipeline from data collection to API serving.
 
 1. Setup environment
 ```bash
-   git clone <repo-url>
+git clone <repo-url>
 cd Portfolio_Risk_Monitor
 
 python3 -m venv venv
