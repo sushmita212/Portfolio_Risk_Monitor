@@ -1,4 +1,4 @@
-# Portfolio_Risk_Monitor
+# Portfolio Risk Monitor
 This project implements a modular risk analytics system for constructing portfolios from a configurable set of assets and computing Value-at-Risk (VaR). The portfolio is customizable through adjustable asset weights, enabling flexible risk assessment across different asset combinations.
 
 The system is built using FastAPI to expose portfolio risk metrics through HTTP endpoints.
@@ -75,3 +75,23 @@ The system uses historical market data sourced from yfinance to construct time s
 ```bash
 scripts/update_prices.sh
 ```
+## Risk Layer
+
+The risk layer is responsible for computing portfolio-level risk metrics from historical asset price data.
+
+**Portfolio Construction**
+Portfolio returns are constructed using user-defined asset weights
+Returns are aggregated across multiple assets to form a single portfolio return series
+
+**Risk Estimation Methods**
+
+The system implements Value-at-Risk (VaR) using two approaches:
+
+Historical Simulation (Quantile-Based Method)
+VaR is computed directly from the empirical distribution of historical portfolio returns.
+Parametric (Variance-Covariance Method)
+VaR is estimated under a normality assumption using portfolio mean and covariance of returns.
+
+**Output**
+The layer produces portfolio-level VaR estimates for a given confidence level and time horizon
+
