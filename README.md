@@ -112,7 +112,7 @@ Once running, interactive API documentation is available at: /docs (Swagger UI)
 
 Follow these steps to run the full pipeline from data collection to API serving.
 
-1. Setup environment
+**1. Setup environment**
 ```bash
 git clone <repo-url>
 cd Portfolio_Risk_Monitor
@@ -122,15 +122,15 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 ```
-2. Download / refresh data
+**2. Download / refresh data**
 ```bash
 scripts/update_prices.sh
 ```
-3. Start the API
+**3. Start the API**
 ```bash
 uvicorn src.api.main:app --reload
 ```
-4. Access API
+**4. Access API**
 - Swagger UI: http://127.0.0.1:8000/docs
 
 
