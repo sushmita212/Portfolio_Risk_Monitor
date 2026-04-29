@@ -80,18 +80,19 @@ scripts/update_prices.sh
 The risk layer is responsible for computing portfolio-level risk metrics from historical asset price data.
 
 **Portfolio Construction**
-Portfolio returns are constructed using user-defined asset weights
-Returns are aggregated across multiple assets to form a single portfolio return series
+- Portfolio returns are constructed using user-defined asset weights
+- Returns are aggregated across multiple assets to form a single portfolio return series
 
 **Risk Estimation Methods**
 
 The system implements Value-at-Risk (VaR) using two approaches:
 
-Historical Simulation (Quantile-Based Method)
+- Historical Simulation (Quantile-Based Method):
 VaR is computed directly from the empirical distribution of historical portfolio returns.
-Parametric (Variance-Covariance Method)
+- Parametric (Variance-Covariance Method):
 VaR is estimated under a normality assumption using portfolio mean and covariance of returns.
 
 **Output**
+
 The layer produces portfolio-level VaR estimates for a given confidence level and time horizon
 
