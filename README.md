@@ -29,27 +29,8 @@ User
 - Used to validate all components of the pipeline
 - Covers returns computation, portfolio logic, and VaR calculations
 
-## Environment Setup
-The project requires Python 3.11+.
 
-It is recommended to use a virtual environment to manage dependencies.
-```bash
-# Clone the repository
-git clone <repo-url>
-cd Portfolio_Risk_Monitor
 
-# Create virtual environment
-python3 -m venv venv
-
-# Activate environment
-# macOS / Linux:
-source venv/bin/activate
-# Windows:
-venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
 ## Data Pipeline
 
 The system uses historical market data sourced from yfinance to construct time series for a predefined set of assets.
@@ -111,13 +92,24 @@ Once running, interactive API documentation is available at: /docs (Swagger UI)
 Follow these steps to run the full pipeline from data collection to API serving.
 
 **1. Setup environment**
+The project requires Python 3.11+.
+
+It is recommended to use a virtual environment to manage dependencies.
 ```bash
+# Clone the repository
 git clone <repo-url>
 cd Portfolio_Risk_Monitor
 
+# Create virtual environment
 python3 -m venv venv
-source venv/bin/activate
 
+# Activate environment
+# macOS / Linux:
+source venv/bin/activate
+# Windows:
+venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 **2. Download / refresh data**
