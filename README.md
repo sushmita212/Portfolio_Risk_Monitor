@@ -102,7 +102,7 @@ The system exposes portfolio risk metrics through a FastAPI-based REST interface
 
 **Functionality**
 - Provides programmatic access to VaR estimates
-- Accepts portfolio configurations (list of asset tickers, asset weights, horizon, confidence level, VaR method)
+- Accepts portfolio configuration inputs (asset tickers, weights, time horizon, confidence level, VaR method, and drift inclusion flag)
 - Returns computed risk metrics in JSON format
   
 **Usage**
@@ -112,7 +112,5 @@ The API can be started using:
 ```bash
 uvicorn src.api.main:app --reload
 ```
-Once running, interactive API documentation is available at:
-
-/docs (Swagger UI)
+Once running, interactive API documentation is available at: /docs (Swagger UI)
 
