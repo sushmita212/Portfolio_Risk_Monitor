@@ -29,64 +29,6 @@ User
 - Used to validate all components of the pipeline
 - Covers returns computation, portfolio logic, and VaR calculations
 
-
-
-## Data Pipeline
-
-The system uses historical market data sourced from yfinance to construct time series for a predefined set of assets.
-
-**Data Source**
-- Historical price data is fetched using the yfinance API
-- The asset universe includes liquid ETFs and indices such as SPY, QQQ, IWM, and others
-  
-**Local Storage**
-- Data is stored locally in CSV format under data/raw/
-- Metadata about the last update is tracked in data/metadata.json, and refresh activity is logged in logs/refresh.jsonl
-  
-**Data Download/Refresh**
-- The dataset can be fully downloaded (initial run) or incrementally refreshed (subsequent runs) using the update script:
-```bash
-scripts/update_prices.sh
-```
-## Risk Layer
-
-The risk layer is responsible for computing portfolio-level risk metrics from historical asset price data.
-
-**Portfolio Construction**
-- Portfolio returns are constructed using user-defined asset weights
-- Returns are aggregated across multiple assets to form a single portfolio return series
-
-**Risk Estimation Methods**
-
-The system implements VaR using two approaches:
-
-- Historical Simulation (Quantile-Based Method):
-VaR is computed directly from the empirical distribution of historical portfolio returns.
-- Parametric (Variance-Covariance Method):
-VaR is estimated under a normality assumption using portfolio mean and covariance of returns.
-
-**Output**
-
-The layer produces portfolio-level VaR estimates for a given confidence level and time horizon
-
-## API Layer
-
-The system exposes portfolio risk metrics through a FastAPI-based REST interface.
-
-**Functionality**
-- Provides programmatic access to VaR estimates
-- Accepts portfolio configuration inputs (asset tickers, weights, time horizon, confidence level, VaR method, and drift inclusion flag)
-- Returns computed risk metrics in JSON format
-  
-**Usage**
-
-The API can be started using:
-
-```bash
-uvicorn src.api.main:app --reload
-```
-Once running, interactive API documentation is available at: /docs (Swagger UI)
-
 ## How to Run End-to-End
 
 Follow these steps to run the full pipeline from data collection to API serving.
@@ -120,8 +62,7 @@ scripts/update_prices.sh
 uvicorn src.api.main:app --reload
 ```
 **4. Access API**
-- Swagger UI: http://127.0.0.1:8000/docs
-
+- Once running, interactive API documentation is available at: /docs (Swagger UI)
 
 ## Future Work
 - Implementation of Expected Shortfall (ES) as an additional tail risk measure
