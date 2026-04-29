@@ -96,3 +96,23 @@ VaR is estimated under a normality assumption using portfolio mean and covarianc
 
 The layer produces portfolio-level VaR estimates for a given confidence level and time horizon
 
+## API Layer
+
+The system exposes portfolio risk metrics through a FastAPI-based REST interface.
+
+**Functionality**
+- Provides programmatic access to VaR estimates
+- Accepts portfolio configurations (list of asset tickers, asset weights, horizon, confidence level, VaR method)
+- Returns computed risk metrics in JSON format
+  
+**Usage**
+
+The API can be started using:
+
+```bash
+uvicorn src.api.main:app --reload
+```
+Once running, interactive API documentation is available at:
+
+/docs (Swagger UI)
+
