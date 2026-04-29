@@ -65,9 +65,11 @@ The system uses historical market data sourced from yfinance to construct time s
 **Data Source**
 - Historical price data is fetched using the yfinance API
 - The asset universe includes liquid ETFs and indices such as SPY, QQQ, IWM, and others
+  
 **Local Storage**
 - Data is stored locally in CSV format under data/raw/
-- Metadata about the last update is tracked in data/metadata.json
+- Metadata about the last update is tracked in data/metadata.json, and refresh activity is logged in logs/refresh.jsonl
+  
 **Data Download/Refresh**
 - The dataset can be fully downloaded (initial run) or incrementally refreshed (subsequent runs) using the update script:
 ```bash
