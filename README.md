@@ -92,9 +92,8 @@ Once running, interactive API documentation is available at: /docs (Swagger UI)
 Follow these steps to run the full pipeline from data collection to API serving.
 
 **1. Setup environment**
-The project requires Python 3.11+.
 
-It is recommended to use a virtual environment to manage dependencies.
+The project requires Python 3.11+. It is recommended to use a virtual environment to manage dependencies.
 ```bash
 # Clone the repository
 git clone <repo-url>
