@@ -3,34 +3,28 @@ This project implements a modular risk analytics system for constructing portfol
 
 The system is built using FastAPI to expose portfolio risk metrics through HTTP endpoints.
 
-The primary objective of the project is to explore and apply concepts in financial risk modeling, including statistical risk estimation, model backtesting, and software engineering practices for building reliable and reproducible analytics systems. An Expected Shortfall (ES) endpoint is currently under development.
+The primary objective of the project is to explore and apply concepts in financial risk modeling, including statistical risk estimation, model backtesting, and software engineering practices for building reliable and reproducible analytics systems. 
 
 The project includes unit and integration testing to ensure correctness and reliability of the risk computation pipeline.
 
 ## System Architecture
-The system computes portfolio-level Value-at-Risk (VaR) and exposes results through a FastAPI-based interface.
-
-It is organized into four main layers:
-
+The system organized into four main layers:
 
 **1. Data Layer**
 - Fetches historical market data using yfinance
 - Stores data locally in CSV format (data/raw/)
 - Maintains metadata and refresh logs for tracking updates
-
   
 **2. Risk Engine**
 - Computes portfolio returns based on configurable asset weights
 - Implements Value-at-Risk (VaR) using two approaches: Historical simulation (quantile-based method), Parametric method (Variance-Covariance approach)
 - Ongoing work on implementing Expected Shortfall (ES) as an additional tail risk measure
 - Supports portfolio-level aggregation across multiple assets
-
   
 **3. API Layer**
 - Built using FastAPI
 - Exposes risk metrics through HTTP endpoints
 - Enables programmatic access to VaR estimates for any valid portfolio configuration
-
   
 **4. Testing Layer**
 - Includes unit tests for core risk computations
@@ -85,7 +79,7 @@ The risk layer is responsible for computing portfolio-level risk metrics from hi
 
 **Risk Estimation Methods**
 
-The system implements Value-at-Risk (VaR) using two approaches:
+The system implements VaR using two approaches:
 
 - Historical Simulation (Quantile-Based Method):
 VaR is computed directly from the empirical distribution of historical portfolio returns.
@@ -113,4 +107,35 @@ The API can be started using:
 uvicorn src.api.main:app --reload
 ```
 Once running, interactive API documentation is available at: /docs (Swagger UI)
+
+## How to Run End-to-End
+
+Follow these steps to run the full pipeline from data collection to API serving.
+
+1. Setup environment
+```bash
+   git clone <repo-url>
+cd Portfolio_Risk_Monitor
+
+python3 -m venv venv
+source venv/bin/activate
+
+pip install -r requirements.txt
+```
+2. Download / refresh data
+```bash
+scripts/update_prices.sh
+```
+3. Start the API
+```bash
+uvicorn src.api.main:app --reload
+```
+4. Access API
+- Swagger UI: http://127.0.0.1:8000/docs
+
+
+## Future Work
+- Implementation of Expected Shortfall (ES) as an additional tail risk measure
+- Extension of the risk engine to include stress testing and scenario-based analysis
+- Addition of portfolio optimization capabilities (e.g., mean-variance optimization)
 
